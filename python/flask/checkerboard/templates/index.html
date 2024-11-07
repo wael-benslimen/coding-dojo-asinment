@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .checker{
+            display: flex;
+        }
+        .checker_row{
+            display: grid;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .sectblack{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+        .sectwhite{
+            width: 50px;
+            height: 50px;
+            background-color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <!-- checkerboard container -->
+   <h1>Checkerboard</h1>
+   <div class="checker">
+    {% for i in range(number)%}
+        <div class="checker_row">
+            {% for i in range(number)%}
+            <div class="sectwhite" style="background-color: {{col1}};"></div>
+            <div class="sectblack" style="background-color: {{col2}};"></div>
+            {% endfor %}
+        </div>  
+        <div class="checker_row">
+            {% for i in range(number)%}
+            <div class="sectblack" style="background-color: {{col2}};"></div>
+            <div class="sectwhite" style="background-color: {{col1}};"></div>
+            {% endfor %}
+        </div> 
+    {% endfor %}
+   
+    </div>
+   <!-- endcheckboard container -->
+</body>
+</html>

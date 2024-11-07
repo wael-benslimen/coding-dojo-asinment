@@ -1,0 +1,35 @@
+pip install pipenv
+pipenv install flask
+pipenv shell
+
+
+#if there is a problem
+python -m pipenv <command to use>
+
+#check the istallation
+pip list
+
+# exit
+exit
+
+#app creaton
+from flask import Flask  
+app = Flask(__name__)    
+@app.route('/')          
+def hello_world():
+    return 'Hello World!'  
+if __name__=="__main__":   
+    app.run(debug=True)  
+
+
+"{{ url_for('static', filename='style.css') }}"
+    
+      
+#change the host 
+app.run(debug=True, host="localhost", port=8000)
+
+
+from flask import Flask, render_template, request, redirect, session
+
+app.secret_key = 'keep it secret, keep it safe'
+

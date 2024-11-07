@@ -1,0 +1,21 @@
+insert into dojos (name) values ('dojo1'),('dojo2'),('dojo3');
+
+delete from dojos
+
+insert into dojos (name) values ('dojo4'),('dojo5'),('dojo6')
+
+insert into ninjas (first_name, last_name, age, dojos_id) values ('ninja1','thefighter',20,(select id from dojos where id = 4)),('ninja2','thecodeeditor',20,(select id from dojos where id = 4)), ('ninja3','thefighter',20,(select id from dojos where id = 4));
+
+insert into ninjas (first_name, last_name, age, dojos_id) values ('ninja4','thefighter',20,(select id from dojos where id = 5)),('ninja5','thecodeeditor',20,(select id from dojos where id = 5)), ('ninja6','thefighter',20,(select id from dojos where id = 5));
+
+insert into ninjas (first_name, last_name, age, dojos_id) values ('ninja4','thefighter',20,(select id from dojos where id = 6)),('ninja5','thecodeeditor',20,(select id from dojos where id = 6)), ('ninja6','thefighter',20,(select id from dojos where id = 6));
+
+select * from ninjas where dojos_id = 4;
+
+select * from ninjas where dojos_id = 6;
+
+select * from dojos where id = 6
+
+select * from ninjas join dojos on dojos.id = ninjas.dojos_id where ninjas.dojos_id = 6;
+
+select * from dojos join ninjas on ninjas.dojos_id = dojos.id;

@@ -1,0 +1,4 @@
+query = "SELECT * FROM users WHERE email = %(email)s;"
+data = { 'email' : request.form['email'] }
+result = mysql.query_db(query, data)
+

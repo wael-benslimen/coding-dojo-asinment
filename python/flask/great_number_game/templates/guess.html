@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+</head>
+<body>
+    <form action="/guess" method="post">
+        <h1>Welcome to the Great Number Game!</h1>
+        
+        {% if feedback == "too low" %}
+            <h2>Your guess is too low!</h2>
+            <p>Take another guess:</p>
+        {% elif feedback == "too high" %}
+            <h2>Your guess is too high!</h2>
+            <p>Take another guess:</p>
+        {% else %}
+            <h2>Correct! The number was {{ random_number }}!</h2>
+            <a href="/">Play Again</a>
+        {% endif %}
+
+        {% if feedback != "correct" %}
+            <input type="text" name="number" required>
+            <input type="submit" value="Guess">
+        {% endif %}
+    </form>
+</body>
+</html>

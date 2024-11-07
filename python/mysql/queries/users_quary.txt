@@ -1,0 +1,13 @@
+insert into users(first_name, last_name, email) values('wael', 'benslimen', 'xxxxx@gmail.com'), ('jhon', 'doe', 'jhon11@gmail.com'), ('sarra', 'last', 'sarra11@gmail.com');
+
+select * from users;
+
+select * from users where email = 'xxxxx@gmail.com';
+
+select * from users where id = 3;
+
+select * from users order by first_name
+
+UPDATE `users_schema`.`users` SET `first_name` = 'pancakes' WHERE (`id` = '3');
+
+delete from users where id = 2;

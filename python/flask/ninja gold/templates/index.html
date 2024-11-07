@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="wallet">
+        <p>your gold: </p> 
+        <p>{{ gold }}</p>
+    </div>
+    <div class="gold_gen"> 
+            <form action="/" method="post">
+                <div class="farm">
+                    <h2>farm</h2>
+                    <p>(earn 10-20 gold)</p>
+                    <input type="hidden" name="building" value="farm">
+                    <input type="submit" value="get gold">
+                </div>
+                <div class="cave">
+                    <h2>cave</h2>
+                    <p>(earn 5-20 gold)</p>
+                    <input type="hidden" name="building" value="cave">
+                    <input type="submit" value="get gold">
+                </div>
+                <div class="house">
+                    <h2>house</h2>
+                    <p>(earn 2-5 gold)</p>
+                    <input type="hidden" name="building" value="house">
+                    <input type="submit" value="get gold">
+                </div>
+                <div class="casino">
+                    <h2>casino</h2>
+                    <p>(earn 0-50 gold)</p>
+                    <input type="hidden" name="building" value="casino">
+                    <input type="submit" value="get gold">
+                </div>
+            </form>
+  
+         
+           
+    </div>
+</body>
+</html>
